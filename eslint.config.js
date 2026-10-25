@@ -13,12 +13,11 @@ export default [
       sourceType: 'module',
       globals: {
         ...globals.browser,
-        ...globals.node,
-        ...globals.jest
+        ...globals.node
       }
     },
     rules: {
-      'indent': ['error', 4, { SwitchCase: 1 }],
+      'indent': ['error', 'tab', { SwitchCase: 1 }],
       'comma-dangle': ['error', 'only-multiline'],
       'comma-style': ['error', 'last'],
       'constructor-super': 'off',

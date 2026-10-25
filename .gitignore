@@ -37,3 +37,5 @@ node_modules/
 api/
 ./dist/
 lib/
+test/fixtures/next/.next/
+test/fixtures/vite/dist/
