@@ -24,4 +24,6 @@
 - Remove the public internal `Tests` namespace and `@flippydisk/tools/tests` export.
 - Remove `Json.promise`, `Json.responder`, and their subpath exports.
 - Remove Travis CI and legacy shell release scripts.
+- Replace the legacy workstation publisher with cross-platform local versioning and an OIDC-backed GitHub Actions npm release workflow.
+- Remove the unused DocumentJS configuration, JSDoc generator, stale module guides, and generated `docs/` website in favor of maintained Markdown and the GitHub Wiki.
 - Remove all runtime dependencies.

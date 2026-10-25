@@ -44,7 +44,7 @@ Overall status: Implementation and validation complete on `modernization/v2`.
 | `getStringSafely` | Modernize | Retained coercion behavior and now returns `null` for circular or throwing objects. |
 | Empty/null/type helpers | Simplify | Retained public distinctions; use native object, array, and number operations. |
 | Build conversion | Replace | Native ESM copy plus esbuild-generated CommonJS entry points. |
-| Generated docs | Retain | JSDoc remains available and generated documentation was refreshed. |
+| Documentation | Simplify | Removed DocumentJS, JSDoc, stale module guides, and generated HTML; maintain Markdown and use the GitHub Wiki for longer-form material. |
 
 ## Architectural Decisions
 
@@ -59,7 +59,7 @@ Overall status: Implementation and validation complete on `modernization/v2`.
 
 - Removed `@swc/core`, `@swc/jest`, `cross-env`, Jest, jsdom/Jest DOM environment, fetch mocking, and raw-loader tooling.
 - Added esbuild solely for CommonJS generation.
-- Retained ESLint, globals, and JSDoc at current supported versions.
+- Retained ESLint and globals at current supported versions.
 - Reduced the installed dependency tree from approximately 570 packages to 114 packages.
 - Runtime dependencies: zero.
 
@@ -86,12 +86,14 @@ See `MIGRATION.md` and `CHANGELOG.md` for consumer guidance.
 - Vite 7 production build: pass.
 - Next.js 16 production build with server-side Debug construction: pass.
 - `npm audit`: 0 known vulnerabilities.
-- `npm pack --dry-run`: 28 files, 12.0 kB compressed, 70.6 kB unpacked.
+- `npm pack --dry-run`: 28 files, 12.8 kB compressed, 73.2 kB unpacked.
 
 ## Files and Infrastructure
 
 - Added durable instructions, this progress record, changelog, migration guide, native tests, consumer fixtures, and GitHub Actions.
-- Reworked source modules, package exports, package scripts, ESLint, build output, README, and generated JSDoc.
+- Reworked source modules, package exports, package scripts, ESLint, build output, and Markdown documentation.
+- Removed obsolete DocumentJS and JSDoc configuration, generated HTML documentation, and stale per-module README files.
+- Restored cross-platform `bump` and `release` commands; npm publication now runs through a manually dispatched or `NPM Release`-labeled pull request workflow with trusted publishing and provenance.
 - Removed Travis CI, Jest/SWC configuration, internal test exports, old JSON error helpers, and shell release scripts.
 - Incorporated the pre-existing user changes that removed runtime jsdom and updated the Jest DOM environment before Jest was removed.
 
@@ -103,4 +105,4 @@ See `MIGRATION.md` and `CHANGELOG.md` for consumer guidance.
 
 ## Next Action
 
-Review draft PR #14. After approval, merge and publish 2.0.0 through the normal release process; no merge, tag, or publication has been performed.
+Review draft PR #14. After approval, apply the `NPM Release` label and merge to publish through GitHub Actions; no merge, tag, or publication has been performed.

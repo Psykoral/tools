@@ -54,8 +54,7 @@
     "@eslint/js": "^10.0.1",
     "esbuild": "^0.28.2",
     "eslint": "^10.13.0",
-    "globals": "^17.13.0",
-    "jsdoc": "^4.0.5"
+    "globals": "^17.13.0"
   },
   "scripts": {
     "lint": "eslint src test/*.test.js scripts",
@@ -64,8 +63,9 @@
     "test:unit": "node --test --experimental-test-coverage test/ajax.test.js test/debug.test.js test/disable.test.js test/lang.test.js",
     "test:watch": "node --test --watch",
     "build": "node ./scripts/build.js",
+    "bump": "node ./scripts/bump.js",
     "check": "npm run lint && npm test && npm pack --dry-run",
-    "docs": "jsdoc --configure jsdoc.json",
+    "release": "node ./scripts/release.js",
     "test:package": "node --test test/package.test.js"
   },
   "license": "MIT",
