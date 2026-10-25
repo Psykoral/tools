@@ -2,9 +2,9 @@
 
 ## Status
 
-Current phase: Phase 12 — Release-candidate verification and PR preparation
+Current phase: Complete — Draft PR #14 is ready for review
 
-Overall status: Implementation complete on `modernization/v2`; final checks and PR preparation remain.
+Overall status: Implementation and validation complete on `modernization/v2`.
 
 ## Objectives
 
@@ -28,7 +28,7 @@ Overall status: Implementation complete on `modernization/v2`; final checks and 
 - [x] Phase 9 — Security review
 - [x] Phase 10 — CI/CD and development scripts
 - [x] Phase 11 — Documentation and migration guide
-- [ ] Phase 12 — Release-candidate verification and PR
+- [x] Phase 12 — Release-candidate verification and PR
 
 ## Audit and Utility Decisions
 
@@ -103,4 +103,4 @@ See `MIGRATION.md` and `CHANGELOG.md` for consumer guidance.
 
 ## Next Action
 
-Run the complete clean validation suite, review the final diff, commit coherent stages, push the feature branch, and prepare a reviewable pull request without merging or publishing.
+Review draft PR #14. After approval, merge and publish 2.0.0 through the normal release process; no merge, tag, or publication has been performed.
